@@ -42,7 +42,7 @@ public class VisualizeSimulation extends JFrame {
 	private EnvironmentPanel envPanel;
 	private StatusPanel statusPanel;
 	private Environment env;
-	private String mapFile = "CSC411_ProblemSet06/maps/public/map01.txt";
+	private String mapFile = "CSC411_ProblemSet06/maps/public/map04.txt";
 	private String configFile = "CSC411_ProblemSet06/config/configSmall.txt";
 	private Timer timer;
 	
