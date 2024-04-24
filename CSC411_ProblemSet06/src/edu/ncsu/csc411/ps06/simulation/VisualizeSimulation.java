@@ -42,8 +42,8 @@ public class VisualizeSimulation extends JFrame {
 	private EnvironmentPanel envPanel;
 	private StatusPanel statusPanel;
 	private Environment env;
-	private String mapFile = "maps/public/map08.txt";
-	private String configFile = "config/configNormal.txt";
+	private String mapFile = "CSC411_ProblemSet06/maps/public/map01.txt";
+	private String configFile = "CSC411_ProblemSet06/config/configSmall.txt";
 	private Timer timer;
 	
 	/* Builds the environment; while not necessary for this problem set,
@@ -147,46 +147,46 @@ class EnvironmentPanel extends JPanel{
 		for (Position pos : tiles.keySet()) {
 			switch(tiles.get(pos).getStatus()) {
 				case BLANK: 
-					drawSprite("sprite/tile.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/tile.png", g, pos);
 					break;
 				case CHIP:
-					drawSprite("sprite/chip.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/chip.png", g, pos);
 					break;
 				case WALL:
-					drawSprite("sprite/wall.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/wall.png", g, pos);
 					break;
 				case GOAL:
-					drawSprite("sprite/goal.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/goal.png", g, pos);
 					break;
 				case DOOR_GOAL:
-					drawSprite("sprite/door_goal.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/door_goal.png", g, pos);
 					break;
 				case DOOR_BLUE:
-					drawSprite("sprite/door_blue.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/door_blue.png", g, pos);
 					break;
 				case DOOR_GREEN:
-					drawSprite("sprite/door_green.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/door_green.png", g, pos);
 					break;
 				case DOOR_RED:
-					drawSprite("sprite/door_red.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/door_red.png", g, pos);
 					break;
 				case DOOR_YELLOW:
-					drawSprite("sprite/door_yellow.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/door_yellow.png", g, pos);
 					break;
 				case KEY_BLUE:
-					drawSprite("sprite/key_blue.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/key_blue.png", g, pos);
 					break;
 				case KEY_GREEN:
-					drawSprite("sprite/key_green.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/key_green.png", g, pos);
 					break;
 				case KEY_RED:
-					drawSprite("sprite/key_red.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/key_red.png", g, pos);
 					break;
 				case KEY_YELLOW:
-					drawSprite("sprite/key_yellow.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/key_yellow.png", g, pos);
 					break;
 				case WATER:
-					drawSprite("sprite/water.png", g, pos);
+					drawSprite("CSC411_ProblemSet06/sprite/water.png", g, pos);
 					break;
 				default:
 					break;
@@ -195,7 +195,7 @@ class EnvironmentPanel extends JPanel{
 		// Paint Robot
 		for(Robot robot : robots) {
 			Position robotPos = env.getRobotPosition(robot);
-			drawSprite("sprite/chip_forward.png", g, robotPos);
+			drawSprite("CSC411_ProblemSet06/sprite/chip_forward.png", g, robotPos);
 		}
 	}
 	
@@ -291,11 +291,11 @@ class InventoryPanel extends JPanel {
 			add(icons[i]);
 		}
 		this.keyIcons = new ImageIcon[5];
-		this.keyIcons[0] = new ImageIcon("sprite/tile.png");
-		this.keyIcons[1] = new ImageIcon("sprite/key_blue.png");
-		this.keyIcons[2] = new ImageIcon("sprite/key_green.png");
-		this.keyIcons[3] = new ImageIcon("sprite/key_red.png");
-		this.keyIcons[4] = new ImageIcon("sprite/key_yellow.png");
+		this.keyIcons[0] = new ImageIcon("CSC411_ProblemSet06/sprite/tile.png");
+		this.keyIcons[1] = new ImageIcon("CSC411_ProblemSet06/sprite/key_blue.png");
+		this.keyIcons[2] = new ImageIcon("CSC411_ProblemSet06/sprite/key_green.png");
+		this.keyIcons[3] = new ImageIcon("CSC411_ProblemSet06/sprite/key_red.png");
+		this.keyIcons[4] = new ImageIcon("CSC411_ProblemSet06/sprite/key_yellow.png");
 	}
 	
 	public void updateHoldings() {
